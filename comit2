@@ -1,0 +1,28 @@
+   String resultado;
+        num2 = pantalla.getText();
+        if (!num2.equals("")) {
+            resultado = solucion(num1, num2, signo);
+            pantalla.setText(resultado);
+
+        }
+    }
+
+    public String solucion(String num1, String num2, String signo) {
+
+        if (signo.equals("+")) {
+            resultado = Double.parseDouble(num1) + Double.parseDouble(num2);
+
+        }
+        if (signo.equals("-")) {
+            resultado = Double.parseDouble(num1) - Double.parseDouble(num2);
+        }
+        if (signo.equals("*")) {
+            resultado = Double.parseDouble(num1) * Double.parseDouble(num2);
+        }
+        if (signo.equals("/")) {
+            resultado = Double.parseDouble(num1) / Double.parseDouble(num2);
+
+        }
+
+        respuesta = resultado.toString();
+        return respuesta;
