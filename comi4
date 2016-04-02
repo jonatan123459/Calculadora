@@ -1,0 +1,16 @@
+
+    Double doub;
+    String Memoria1;
+    String Memoria2;
+    String memoria;
+    String variable;
+    String num1;
+    String num2;
+    String signo;
+    String respuesta;
+    Double resultado = 0.0;
+      private void sumaActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        if (!pantalla.getText().equals("")) {
+            num1 = pantalla.getText();
+            signo = "+";
+            pantalla.setText("");
