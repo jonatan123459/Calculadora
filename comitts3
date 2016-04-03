@@ -1,0 +1,197 @@
+  private void button3ActionPerformed(java.awt.event.ActionEvent evt) {                                        
+
+        pantalla.setText(pantalla.getText() + "2");
+    }                                       
+
+    private void button6ActionPerformed(java.awt.event.ActionEvent evt) {                                        
+
+        pantalla.setText(pantalla.getText() + "5");          // TODO add your handling code here:
+    }                                       
+
+    private void CEActionPerformed(java.awt.event.ActionEvent evt) {                                   
+
+        pantalla.setText(pantalla.getText() + "8");       // TODO add your handling code here:
+    }                                  
+
+    private void boton1ActionPerformed(java.awt.event.ActionEvent evt) {                                       
+
+        pantalla.setText(pantalla.getText() + "1");
+
+
+    }                                      
+
+    private void button2ActionPerformed(java.awt.event.ActionEvent evt) {                                        
+
+        pantalla.setText(pantalla.getText() + "3");          // TODO add your handling code here:
+    }                                       
+
+    private void button4ActionPerformed(java.awt.event.ActionEvent evt) {                                        
+
+        pantalla.setText(pantalla.getText() + "4");           // TODO add your handling code here:
+    }                                       
+
+    private void button5ActionPerformed(java.awt.event.ActionEvent evt) {                                        
+
+        pantalla.setText(pantalla.getText() + "6");        // TODO add your handling code here:
+    }                                       
+
+    private void lessActionPerformed(java.awt.event.ActionEvent evt) {                                     
+
+        String cadena1;
+        cadena1 = pantalla.getText();
+        if (cadena1.length() > 0) {
+            cadena1 = cadena1.substring(0, cadena1.length() - 1);
+            pantalla.setText(cadena1);
+
+        }
+        // TODO add your handling code here:
+    }                                    
+
+    private void CActionPerformed(java.awt.event.ActionEvent evt) {                                  
+        pantalla.setText("");         // TODO add your handling code here:
+    }                                 
+
+    private void botonM2ActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        // TODO add your handling code here:
+    }                                       
+
+    private void multiplicacionActionPerformed(java.awt.event.ActionEvent evt) {                                               
+        if (!pantalla.getText().equals("")) {
+            num1 = pantalla.getText();
+            signo = "*";
+            pantalla.setText("");
+
+        }
+
+
+    }                                              
+
+    private void divisionActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        if (!pantalla.getText().equals("")) {
+            num1 = pantalla.getText();
+            signo = "/";
+            pantalla.setText("");
+        }
+    }                                        
+
+    private void boton0ActionPerformed(java.awt.event.ActionEvent evt) {                                       
+        // TODO add your handling code here:
+    }                                      
+
+    private void sumaActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        if (!pantalla.getText().equals("")) {
+            num1 = pantalla.getText();
+            signo = "+";
+            pantalla.setText("");
+
+        }
+
+
+    }                                    
+
+    {
+
+    }
+
+
+    private void comaActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        // TODO add your handling code here:
+    }                                    
+
+    private void restaActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        if (!pantalla.getText().equals("")) {
+            num1 = pantalla.getText();
+            signo = "-";
+            pantalla.setText("");
+
+        }
+
+    }                                     
+
+    private void modActionPerformed(java.awt.event.ActionEvent evt) {                                    
+        // TODO add your handling code here:
+    }                                   
+
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        System.exit(0);        // TODO add your handling code here:
+    }                                       
+
+    private void igualActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        String resultado;
+        num2 = pantalla.getText();
+        if (!num2.equals("")) {
+            resultado = solucion(num1, num2, signo);
+            pantalla.setText(resultado);
+
+        }
+    }
+
+    public String solucion(String num1, String num2, String signo) {
+
+        if (signo.equals("+")) {
+            resultado = Double.parseDouble(num1) + Double.parseDouble(num2);
+
+        }
+        if (signo.equals("-")) {
+            resultado = Double.parseDouble(num1) - Double.parseDouble(num2);
+        }
+        if (signo.equals("*")) {
+            resultado = Double.parseDouble(num1) * Double.parseDouble(num2);
+        }
+        if (signo.equals("/")) {
+            resultado = Double.parseDouble(num1) / Double.parseDouble(num2);
+
+        }
+
+        respuesta = resultado.toString();
+        return respuesta;
+
+
+    }                                     
+
+    private void clearActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        memoria = "";
+        algo.setForeground(Color.black);
+
+    }                                     
+
+    private void storageActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        memoria = pantalla.getText();
+
+        pantalla.setText("");
+        algo.setForeground(Color.red);
+
+
+    }                                       
+
+    private void recallActionPerformed(java.awt.event.ActionEvent evt) {                                       
+        pantalla.setText(memoria);
+
+    }                                      
+
+
+    private void button11ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+      
+    }                                        
+
+    private void button9ActionPerformed(java.awt.event.ActionEvent evt) {                                        
+   
+        
+        pantalla.setText(pantalla.getText() + "9");
+    }                                       
+
+    private void butto7ActionPerformed(java.awt.event.ActionEvent evt) {                                       
+        
+        pantalla.setText(pantalla.getText() + "7");        // TODO add your handling code here:
+    }                                      
+
+    private void botonM1ActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        Double cosa;
+
+        num1 = memoria;
+        num2 = pantalla.getText();
+        signo = "+";
+        memoria = solucion(num1, num2, signo);
+        cosa = Double.parseDouble(Memoria1 + Memoria2);
+
+    }                                       
