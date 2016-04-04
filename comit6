@@ -1,0 +1,17 @@
+private void cambioActionPerformed(java.awt.event.ActionEvent evt) {                                       
+        Double num; // variable
+        cadena = pantalla.getText();
+        if (cadena.length() > 0) { // este if funciona para cambiar el signo
+            num = (-1) * Double.parseDouble(cadena);
+            pantalla.setText(num.toString()); // se imprimi en pantalla lo que hay en num
+        }
+    }                                      
+    public static boolean punto(String cadena) { // realiza un metodo para verificar que no exite un . en la pantalla
+        boolean resultado; // variable
+        resultado = false;
+        for (int i = 0; i < cadena.length(); i++) { // ciclo para ver si existe un . 
+            if (cadena.substring(i, i + 1).equals(".")) {
+                resultado = true;
+                break;
+            }
+        }
